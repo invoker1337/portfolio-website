@@ -14,7 +14,7 @@ Text Color (navy;red): #;
 Primary Color (lightblue): #;
 Secondary Color (): #;
  */
- :root { /*color most frequently displayed*//*floating action buttons, selection controls, sliders & switches, highlighting selected text, Progress bars, Links and headlines*//*secondary button*/ /*background doesnt represent brand, appears behind scrollable content*/
+ :root { /*color most frequently displayed*//*floating action buttons, selection controls, sliders & switches, highlighting selected text, Progress bars, Links and headlines*/ /*background doesnt represent brand, appears behind scrollable content*/
 
 
  }
@@ -22,7 +22,8 @@ Secondary Color (): #;
 
 
 body {
-  background-color: lightblue;
+  color: black;
+  background-color: white;
   font-family: 'Azeret Mono', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -30,13 +31,13 @@ body {
 }
 
 h1 {
-  color: navy;
+  color: black;
   font-size: 30px;
   font-weight: 700;
 }
 
 h2 {
-  color: red;
+  color: black;
   font-size: 24px;
   font-weight: 700;
   font-variant: small-caps;
@@ -50,83 +51,93 @@ h3 {
 
 
 
-
-
- a {
-   color: #357b70;
- }
-
-a:hover, a:focus {
-  /* No underlining when hovering over a link */
+a {
+  color: #1f5a78;
   text-decoration: none;
 }
 
-a:visited {
-  /* visited link */
-  color: #2b2b2b;
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 a:active {
-  /* selected link */
-  color: #357b70;
+  background-color: #1f5a78;
+  color: #fff;
 }
 
+
+
+
+
+/* Button style */
 
 .button {
-  /* overwrites browser defaults */
-  /* resets the border */
-  border: none;
   display: inline-block;
-  /* takes the font from the outer container */
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-primary {
+  border: none;
   font-family: inherit;
-  /* style button */
-  background-color: #357b70;
-  color: #e0b354;
+  background-color: #1f5a78;
+  color: #fff;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
-  transition: 0.2s opacity;
+  -webkit-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
+  transition: 0.3s opacity;
 }
 
-
-button {
-  /* overwrites browser defaults */
-  /* resets the border */
+#submit-btn {
   border: none;
-  display: inline-block;
-  /* takes the font from the outer container */
   font-family: inherit;
-  /* style button */
-  background-color: #357b70;
-  color: #e0b354;
+  background-color: #1f5a78;
+  color: #fff;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  /* width of the border, type, color */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  -webkit-transition: 0.2s opacity;
-  -o-transition: 0.2s opacity;
-  transition: 0.2s opacity;
+  -webkit-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
+  transition: 0.3s opacity;
 }
 
-button:hover,
-button:focus,
-.button:hover,
-.button:focus {
-  /* lets the mouse appear as a hand when hovering over the button */
+.button-primary:hover,
+#submit-btn:hover {
   cursor: pointer;
-  /* reduces the opacity of the button to 80% */
-  opacity: 0.8;
+  text-decoration: none;
+  opacity: 0.6;
 }
 
-.button__secondary {
-  background-color: #e0b354;
-  color: #2b2b2b;
+.button-secondary {
+  border: 1px solid #1f5a78;
+  font-family: inherit;
+  background-color: #fff;
+  color: #1f5a78;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
+
+.button-secondary:hover {
+  background-color: #1f5a78;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+
 
 .profile__portrait {
   float: left;
@@ -165,6 +176,7 @@ button:focus,
   display: flex;
   width: 100%;
   padding: 20px;
+  border-bottom: 1px solid #1f5a78;
 }
 
 .page-header__item {
@@ -190,10 +202,8 @@ button:focus,
 }
 
 .navigation-list__item--active {
-text-decoration: none;
-font-size: 22px;
-
-
+  text-decoration: none;
+  font-size: 22px;
 }
 
 .grid {
@@ -202,7 +212,7 @@ font-size: 22px;
 }
 
 .grid__item {
-  background-color: #e0b354;
+  background-color: #f8f8f8;
 }
 
 .grid {
@@ -230,11 +240,31 @@ font-size: 22px;
 .contact {
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 
 
 
+form {
+  background: #f8f8f8;
+  width: 350px;
+  margin: 30px auto 0;
+  text-align: left;
+  padding: 30px;
+  border-radius: 8px;
+}
 
+.field {
+  display: block;
+  width: 100%;
+  margin: 5px 0 20px;
+  padding: 5px;
+}
+
+#submit-btn {
+  display: block;
+  margin: 0 auto;
+}
 
 
 
@@ -246,29 +276,7 @@ font-size: 22px;
 
 /* About page animation*/
 
-@-webkit-keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
 
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
 
 .sun {
   -webkit-animation: 4s color-change infinite alternate linear;
