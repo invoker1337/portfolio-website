@@ -34,6 +34,7 @@ h1 {
   color: black;
   font-size: 30px;
   font-weight: 700;
+  text-align: center;
 }
 
 h2 {
@@ -165,6 +166,12 @@ a:active {
   margin: 0 auto;
 }
 
+/* Work */
+
+.worksection
+{
+  padding: 20px;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -213,6 +220,7 @@ a:active {
 
 .grid__item {
   background-color: #f8f8f8;
+  padding: 10px;
 }
 
 .grid {
@@ -231,6 +239,7 @@ a:active {
 .about {
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 
 
